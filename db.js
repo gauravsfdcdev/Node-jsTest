@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//mongoose.connect("mongodb://localhost:27017/e-commerce");
 require('dotenv').config();
 //Define the Mongodb Connection url
 //const mongoURL = 'mongodb://localhost:27017/hotels'
@@ -10,18 +11,18 @@ const mongoURL = process.env.MONGODB_URL;
 mongoose.connect(mongoURL);
 
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('connected',()=>{
-    console.log('connected to mongodb server');
-});
+// db.on('connected',()=>{
+//     console.log('connected to mongodb server');
+// });
 
-db.on('error',(err)=>{
-    console.log('connected to mongodb server',err);
-});
+// db.on('error',(err)=>{
+//     console.log('connected to mongodb server',err);
+// });
 
-db.on('disconnected',()=>{
-    console.log('disconnected');
-});
+// db.on('disconnected',()=>{
+//     console.log('disconnected');
+// });
 
-module.exports = db;
+// module.exports = db;

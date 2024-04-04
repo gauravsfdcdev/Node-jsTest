@@ -36,7 +36,9 @@ app.get("/",localAuthMiddleware, function (req, res) {
 const personRoutes = require('./routes/personRoute');
 const menuItemRoutes = require('./routes/menuItemRoutes');
 
-app.use('/person',localAuthMiddleware,personRoutes);
+//app.use('/person',localAuthMiddleware,personRoutes);
+//now we can use jwt intead of username and password
+app.use('/person',personRoutes);
 app.use('/menu',menuItemRoutes);
 
 
